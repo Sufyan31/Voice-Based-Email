@@ -158,7 +158,7 @@ def get_email_info():
         mail = smtplib.SMTP('smtp.gmail.com', 587)  # host and port area
         mail.ehlo()  # Hostname to send for this command defaults to the FQDN of the local host.
         mail.starttls()  # security connection
-        mail.login('sufyanmohamed2002@gmail.com', 'dmvrncqrbzsvmeoh')  # login part
+        mail.login('sufyanmohamed2002@gmail.com', '####password')  # login part
         mail.sendmail('sufyanmohamed2002@gmail.com', sendto, msg)  # send part
         print("Congrats! Your mail has sent. ")
         tts = gTTS(text="Congrates! Your mail has send. ", lang='en')
@@ -173,7 +173,7 @@ def get_email_info():
     if text == 'Check' or text == 'check' or text == 'CHECK':
         mail = imaplib.IMAP4_SSL('imap.gmail.com', 993)  # this is host and port area.... ssl security
         unm = ('sufyanmohamed2002@gmail.com')  # username
-        psw = ('dmvrncqrbzsvmeoh')  # password
+        psw = ('###password')  # password
         mail.login(unm, psw)  # login
         stat, total = mail.select('Inbox')  # total number of mails in inbox
         print("Number of mails in your inbox :" + str(total))
